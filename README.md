@@ -36,6 +36,10 @@ sudo update-alternatives --set php /usr/bin/php5.6
 -----------------------
 ## Install XML-php on linux
 ```bash
+apt-get install libxml2-utils
+```
+if above code is not working
+```bash
 sudo apt-get install php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc
 sudo service apache2 restart
 ```
