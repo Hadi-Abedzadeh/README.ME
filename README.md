@@ -49,6 +49,7 @@ php-ini
 
 ```
 extension=apcu.so
+extension=apcu.so
 apc.enabled=1
 apc.shm_size=1024M
 ```
