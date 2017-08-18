@@ -43,3 +43,12 @@ if above code is not working
 sudo apt-get install php-curl php-gd php-mbstring php-mcrypt php-xml php-xmlrpc
 sudo service apache2 restart
 ```
+--------------------
+## setup apache to php
+php-ini
+
+```
+extension=apcu.so
+apc.enabled=1
+apc.shm_size=1024M
+```
