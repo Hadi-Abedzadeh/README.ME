@@ -90,3 +90,7 @@ chmod -R o-rwx /usr/local/apache
 ```bash
 disable_functions = show_source, system, shell_exec, passthru, exec, phpinfo, proc_terminate, proc_open, symlink, proc_close, popen, dl, escapeshellarg, escapeshellcmd
 ```
+## SQL error on "GROUP BY" query:
+```sql
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+```
