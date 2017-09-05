@@ -94,3 +94,9 @@ disable_functions = show_source, system, shell_exec, passthru, exec, phpinfo, pr
 ```sql
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```
+
+
+## For lOOP and append output to text file
+```bash
+for /l %x in (1, 1, 9999) do echo %x >> output.txt
+```
