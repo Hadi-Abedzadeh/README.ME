@@ -100,3 +100,15 @@ SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```bash
 for /l %x in (1, 1, 200) do echo %x >> output.txt
 ```
+
+## Remove mysql from ubuntu
+```bash
+sudo apt-get remove dbconfig-mysql
+sudo apt-get remove --purge mysql*
+sudo apt-get autoremove
+sudo apt-get autoclean
+```
+and for install
+```bash
+sudo apt-get install mysql-server
+```
