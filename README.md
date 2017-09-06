@@ -112,3 +112,10 @@ and for install
 ```bash
 sudo apt-get install mysql-server
 ```
+
+## mysql remote query
+```bash
+/etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address		= 0.0.0.0
+```
+and from phpmyadmin change privilage user access and can run command (SELECT ALL CHECKBOX - SELECT, INSERT, UPDATE ...)
