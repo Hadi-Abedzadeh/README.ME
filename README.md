@@ -53,6 +53,37 @@ extension=apcu.so
 apc.enabled=1
 apc.shm_size=1024M
 ```
+
+### Htaccess not working ...
+after installation apache
+```bash
+sudo a2enmod rewrite
+service apache2 restart
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+```bash
+VirtualHost *:80>
+    <Directory /var/www/html>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    . . .
+</VirtualHost>
+```
+```bash
+sudo nano /var/www/html/.htaccess
+```
+put command into htaccess
+```bash
+RewriteEngine on
+```
+
+more description
+
+https://www.digitalocean.com/community/tutorials/how-to-rewrite-urls-with-mod_rewrite-for-apache-on-ubuntu-16-04
+
 ### DDoS Protection
 ```bash
 wget http://www.inetbase.com/scripts/ddos/install.sh
