@@ -45,6 +45,8 @@ sudo service apache2 restart
 --------------------
 # Apache
 ### setup apache to php
+apt install php libapache2-mod-php
+
 php-ini
 
 ```
