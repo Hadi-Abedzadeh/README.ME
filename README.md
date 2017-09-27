@@ -152,3 +152,44 @@ sudo apt-get install mysql-server
 bind-address		= 0.0.0.0
 ```
 and from phpmyadmin change privilage user access and can run command (SELECT ALL CHECKBOX - SELECT, INSERT, UPDATE ...)
+
+### Remove completely Android studio
+To Completely Remove Android Studio from Windows:
+
+Step 1: Run the Android Studio uninstaller
+
+The first step is to run the uninstaller. Open the Control Panel and under Programs, select Uninstall a Program. After that, click on "Android Studio" and press Uninstall. If you have multiple versions, uninstall them as well.
+
+Step 2: Remove the Android Studio files
+
+To delete any remains of Android Studio setting files, in File Explorer, go to your user folder (%USERPROFILE%), and delete .android, .AndroidStudio and any analogous directories with versions on the end, i.e. .AndroidStudio1.2, as well as .gradle and .m2 if they exist.
+
+Then go to %APPDATA% and delete the JetBrains directory.
+
+Finally, go to C:\Program Files and delete the Android directory.
+
+Step 3: Remove SDK
+
+To delete any remains of the SDK, go to %LOCALAPPDATA% and delete the Android directory.
+
+Step 4: Delete Android Studio projects
+
+Android Studio creates projects in a folder %USERPROFILE%\AndroidStudioProjects, which you may want to delete.
+
+https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10
+
+## Remove .php extention
+Gumbo's answer in the Stack Overflow question How to hide the .html extension with Apache mod_rewrite should work fine.
+
+Re 1) Change the .html to .php
+
+Re a.) Yup, that's possible, just add #tab to the URL.
+
+Re b.) That's possible using QSA (Query String Append), see below.
+
+This should also work in a sub-directory path:
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+
+https://stackoverflow.com/questions/4026021/remove-php-extension-with-htaccess
