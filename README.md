@@ -193,3 +193,9 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
 
 https://stackoverflow.com/questions/4026021/remove-php-extension-with-htaccess
+
+### SQL COUNT OUTPUT ROWS
+```sql
+SET @var:=0;
+SELECT *,(@var:=@var+1) AS `rank` FROM `table`;
+```
