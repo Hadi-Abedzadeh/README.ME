@@ -199,3 +199,29 @@ https://stackoverflow.com/questions/4026021/remove-php-extension-with-htaccess
 SET @var:=0;
 SELECT *,(@var:=@var+1) AS `rank` FROM `table`;
 ```
+
+### INSTALL PHP7 Completely
+
+```bash
+ aptitude search php5-
+ apt-get install php-mbstring php7.0-mbstring php-xdebug
+ apt-get install libapache2-mod-php7.0
+ apt-get install php-intl
+ apt-get install php-devel php-mysqlnd gcc libtool
+ apt-get install php-devel
+ sudo apt-get install php-devel
+ sudo apt-get install php-mcrypt php-curl php-gd
+ sudo apt-get install php7.0
+ sudo a2enmod rewrite
+ service apache2 restart
+
+ apt-get install mcrypt
+ sudo php5enmod mcrypt
+ apt-get install zip
+ sudo apt-get install php libapache2-mod-php
+ sudo a2enmod php7.0
+
+ apt-get install phpenmod
+ apt-get install php7enmod
+ apt-get install php5enmod
+```
