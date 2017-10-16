@@ -203,6 +203,17 @@ SELECT *,(@var:=@var+1) AS `rank` FROM `table`;
 ### INSTALL PHP7 Completely
 
 ```bash
+ sudo rm /var/cache/apt/archives/lock
+ sudo rm /var/lib/dpkg/lock
+ rm /var/lib/dpkg/lock
+ apt-get install update
+ sudo rm /var/lib/dpkg/lock
+ sudo dpkg --configure -a
+ dpkg --configure -a
+ apt-get install update
+ apt-get install apache2
+   
+   
  aptitude search php5-
  apt-get install php-mbstring php7.0-mbstring php-xdebug
  apt-get install libapache2-mod-php7.0
