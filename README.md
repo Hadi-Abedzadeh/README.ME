@@ -236,7 +236,7 @@ SELECT *,(@var:=@var+1) AS `rank` FROM `table`;
  apt-get install php7enmod
  apt-get install php5enmod
 ```
-### PHP Base-AUTH : basic authenticate
+### PHP Base-AUTH : basic authentication
 
 After cheking FPM function in the server (WHM)
 create .htaccess file and write into:
