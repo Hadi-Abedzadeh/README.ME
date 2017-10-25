@@ -236,3 +236,20 @@ SELECT *,(@var:=@var+1) AS `rank` FROM `table`;
  apt-get install php7enmod
  apt-get install php5enmod
 ```
+### PHP Base-AUTH : basic authenticate
+
+After cheking FPM function in the server (WHM)
+create .htaccess file and write into:
+```bash
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(jpg|png|css|js|less|txt|ttf|woff|woff2|xml)$
+RewriteRule ^(.*)$ ./index.php/$1 [L]
+
+Order Allow,Deny
+Allow from all
+
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+Options +FollowSymLinks
+```
