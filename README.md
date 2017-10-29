@@ -253,3 +253,13 @@ Allow from all
 SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
 Options +FollowSymLinks
 ```
+
+### Disable GUI mode in tinker board || linux
+```bash
+Text mode login:
+systemctl set-default multi-user.target
+
+Back to full desktop: 
+systemctl set-default graphical.target
+```
+https://tinkerboarding.co.uk/forum/thread-665.html
