@@ -1,3 +1,4 @@
+# Windows Home
 ### Active RDP In Windows 10 home
 ~> Download: RDPWrap
 
@@ -18,7 +19,11 @@ dir /b %SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools
 for /f %%i in ('findstr /i . List.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i" 
 pause
 ```
-## Windows 10 wifi error "No internet, secured" solved 
+
+# Windows Enterprise
+### Windows 10 wifi error "No internet, secured" solved 
+
+https://answers.microsoft.com/en-us/ie/forum/ie11-iewindows_10/windows-10-wifi-error-no-internet-secured-solved/07e3e865-0cba-4f05-9b73-2b480cd1c322?auth=1
 
 ```plaintest
 1. Go to Control Panel >Network and Internet> Network Connections
@@ -35,3 +40,23 @@ pause
    > Internet Protocol Version 6 (TCP/IPv6)
    > Link-Layer Topology Discovery Responder
 ```
+
+### fix black screen windows 10
+https://www.windowscentral.com/how-fix-black-screen-problems-windows-10
+
+remove VGA driver from safe mode
+for goes to safe mode frist restart your system and press shift
+
+   > 1. trubleshoot
+   
+   > 2. advance mode
+   
+   > 3. sturtup settings
+   
+   > 4. restat
+   
+   > 5. F5
+   
+   > 6. unistall "Display Adapters" without checkbox
+   
+   > 7. restart your system
