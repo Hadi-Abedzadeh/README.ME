@@ -274,3 +274,15 @@ UPDATE wp_posts SET guid = replace(guid, 'http://www.oldurl','http://www.newurl'
 UPDATE wp_posts SET post_content = replace(post_content, 'http://www.oldurl', 'http://www.newurl');
 
 UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.oldurl','http://www.newurl');```
+
+### Up internet speed in linux ubuntu
+I had a similar issue with my system preferring IPv6 over IPv4. To change to preferring IPv4 over IPv6.
+
+Open a terminal
+
+```
+sudo nano /etc/gai.conf
+```
+Locate #precedence ::ffff:0:0/96 100 and and remove the #.
+You may have to reboot. Should notice the difference quickly
+
