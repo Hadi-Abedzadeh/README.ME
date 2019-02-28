@@ -277,12 +277,20 @@ UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.oldurl','http
 
 ### Up internet speed in linux ubuntu
 I had a similar issue with my system preferring IPv6 over IPv4. To change to preferring IPv4 over IPv6.
-
+```
 Open a terminal
 
 ```
 sudo nano /etc/gai.conf
-```
+
 Locate #precedence ::ffff:0:0/96 100 and and remove the #.
+```
 You may have to reboot. Should notice the difference quickly
 
+
+### Redirect https to http
+```bash
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+```
