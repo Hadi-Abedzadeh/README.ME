@@ -48,7 +48,8 @@ Now enable them to run automatically at the boot time.
 
     systemctl enable sshdsystemctl enable postfix
 
-[![Enable Postfix and SSHD](https://www.howtoforge.com/images/how_to_install_and_configure_gitlab_ce_on_centos_7/1.png)][1]
+![Enable Postfix and SSHD](https://www.howtoforge.com/images/how_to_install_and_configure_gitlab_ce_on_centos_7/1.png)
+
 
 All packages required for the GitLab installation are now installed on the server.
 
@@ -69,7 +70,7 @@ Now install GitLab with the following yum command.
 
 When the installation complete, you will get the result as shown below.
 
-[![Install Gitlab](https://www.howtoforge.com/images/how_to_install_and_configure_gitlab_ce_on_centos_7/3.png)][3]
+![Install Gitlab](https://www.howtoforge.com/images/how_to_install_and_configure_gitlab_ce_on_centos_7/3.png)
 
 With this, GitLab CE is now installed on the CentOS 7 server.
 
