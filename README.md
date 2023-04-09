@@ -295,11 +295,3 @@ RewriteEngine On
 RewriteCond %{HTTPS} on
 RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ```
-
-### CTE for get last 3 login
-```bash
-With cte as (
-  SELECT ROW_NUMBER() OVER( PARTITION BY lv.userId ORDER BY lv.created_at DESC, userid, version) row_no, U.name, version, lv.created_at from log_version lv JOIN users u ON U.id = lv.userId
-	)
-Select * from cte WHERE row_no <= 3
-```
