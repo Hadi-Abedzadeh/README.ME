@@ -295,3 +295,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} on
 RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ```
+
+### Renew Let's Encrypt
+```bash
+apt install python3-certbot-apache
+certbot --dry-run renew
+```
